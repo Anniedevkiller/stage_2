@@ -1,8 +1,4 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import ProductCard from "./product_card";
-
-
 export default function Home() {
   return (
     <main className="bg-purple h-10 mx-auto">
