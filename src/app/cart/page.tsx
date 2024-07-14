@@ -18,6 +18,44 @@ interface CartItemData {
   price: number;
   image: string;
 }
+<<<<<<< HEAD
+=======
+const CartItemData: React.FC = ([items]) => {
+  // Define state variables with TypeScript types
+  const [state, setState] = useState<AppState>({
+      count: 0,
+      name: '',
+      user: null,
+      isLoading: false,
+  });
+
+  const incrementCount = () => {
+      setState((prevState) => ({
+          ...prevState,
+          count: prevState.count + 1,
+      }));
+  };
+
+  const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setState((prevState) => ({
+          ...prevState,
+          name: event.target.value,
+      }));
+  };
+
+  return (
+      <div>
+          <p>Count: {state.count}</p>
+          <button onClick={incrementCount}>Increment</button>
+
+          <br />
+
+          <input type="text" value={state.name} onChange={handleNameChange} />
+          <p>Hello, {state.name}!</p>
+      </div>
+  );
+};
+>>>>>>> e42ad2362c2aa13e3ce221a07059d7eded4d8c9a
 
 const CartItem: React.FC<CartItemProps> = ({ item }) => {
   return (
@@ -73,7 +111,11 @@ const CheckoutButton: React.FC<CheckoutButtonProps> = ({ totalPrice }) => {
   return (
     <Link
       href="/checkout"
+<<<<<<< HEAD
       className="flex gap-5 self-end px-10 py-6 mt-36 max-w-full font-bold bg-red-400 rounded-[30px] w-[480px] max-md:flex-wrap max-md:px-5 max-md:mt-10"
+=======
+      className="flex gap-5 self-end px-10 py-6 mt-36 max-w-full font-bold bg-red-400 rounded-[30px] w-[480px] max-md:flex-shrink-0 max-md:px-5 max-md:mt-10"
+>>>>>>> e42ad2362c2aa13e3ce221a07059d7eded4d8c9a
     >
       <span className="flex-auto">Checkout</span>
       <span>${totalPrice}</span>

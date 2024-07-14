@@ -1,11 +1,19 @@
 import React from "react";
+<<<<<<< HEAD
 import { CatSection, HeroSection, NewArrival } from "./component";
+=======
+import {CatSection, HeroSection, NewArrival } from "./component";
+>>>>>>> e42ad2362c2aa13e3ce221a07059d7eded4d8c9a
 
 const page = () => {
   return (
     <>
       <HeroSection />
+<<<<<<< HEAD
       <CatSection />
+=======
+      <CatSection/>
+>>>>>>> e42ad2362c2aa13e3ce221a07059d7eded4d8c9a
       <NewArrival />
       <img
         loading="eager"
